@@ -2,18 +2,31 @@
   border-right: 1px solid rgba(0, 0, 0, 0.14);
   bottom: 0;
   display: block;
-  left: 0;
+  left: -220px;
   position: fixed;
   top: $navbar-height;
+
   /* No mixin for this yet */
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+
   @include translate(0, 0);
   @include transition(transform $sidebar-animation);
   width: $sidebar-width;
   z-index: 3;
   margin-left: 0;
-  overflow-x: scroll;
+
+  @include transition (all 0.3s ease 0s);
+
+  .sidebar-reveal {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: -1px;
+    background-color: #003562;
+    z-index: 10;
+    cursor: pointer;
+  }
 
   .sidebar-wrapper {
     background: $body-bg;

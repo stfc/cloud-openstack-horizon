@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cloud">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Machine FAQ - SCD Cloud</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.png?2" sizes="16x16 24x24 32x32 64x64">
+    <link rel="stylesheet" href="/assets/components/bootstrap/css/bootstrap-3.3.6.min.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
+
+<style>
+.faq {
+    color: #5A5A5A !important;
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top navbar-custom" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" style="display:inline-block;width:180px;font-variant:small-caps">
+                    <img src="/assets/images/logo.png" id="logo" style="height:25px;display:inline-block;margin-top:-5px" /> scd cloud
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="tos.html">Terms</a></li>
+                    <li class="active"><a href="faq.html">FAQs</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="logouttoolbar "><a href="/machines">My Machines</a></li>
+                    <li class="logouttoolbar "><a href="/machines/history">History</a></li>
+                    <li class="logouttoolbar dropdown" style="display:none">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span id="user" style="padding:0 15px"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" style="min-width:0px !important;width:100%">
+                            <li><a href="/machines/ssh">SSH Key</a></li>
+                            <li><a href="#" id="logout" style="">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="logintoolbar" style="display:none">
+                        <a href="http://vm3.nubes.stfc.ac.uk:9000">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                            <span style="padding:0 15px">Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <span id="site-messages"></span>
+
+    <div class="container">
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">FAQ</h1>
+        <ol>
+            <li><a href="#login">How do I login?</a></li>
+            <li><a href="#root">Can I get root access?</a></li>
+            <li><a href="#gui">Can I get a GUI session?</a></li>
+            <li><a href="#resources">Can I increase the RAM or CPUs?</a></li>
+            <li><a href="#quota">Can I increase my quota?</a></li>
+            <li><a href="#disk">Can I increase my disk size?</a></li>
+            <li><a href="#stopping">What is the <span class="label label-warning">STOPPING</span> state?</a></li>
+            <li><a href="#os">Do you support other Linux variants/version?</a></li>
+            <li><a href="#pakiti">Why are Pakiti and rsyslog running on my VM?</a></li>
+        </ol>
+
+        <br />
+        <h3><a name="login" href="#login" class="faq">1. How do I login?</a></h3>
+        <p>
+            You can SSH into your machines with your federal credentials eg. <strong>ssh fed12345@vm20.nubes.stfc.ac.uk</strong>. You can also associate your SSH public key to your account for passwordless login.
+        </p>
+
+        <br />
+        <h3><a name="root" href="#root" class="faq">2. Can I get root access?</a></h3>
+        Yes, once you have logged in with your federal credentials you will have permission to use <strong>sudo</strong>.
+        <p class="text-danger">
+            NOTE: you must not change the root password or remove entires from the authorized_keys file for the root account. Please make sure you have read the <a href="tos.html">Terms of Service</a>.
+        </p>
+
+        <br />
+        <h3><a name="gui" href="#gui" class="faq">3. Can I get a GUI session?</a></h3>
+        <p>
+            Click the <button type="button" class="btn btn-blue btn-xs"><img src="/assets/images/icon-display.png" style="width:14px;margin-top:-2px" /></button> button to get an interactive GUI session inside your browser.
+        </p>
+
+        <br />
+        <h3><a name="resources" href="#resources" class="faq">4. Can I increase the RAM or CPUs?</a></h3>
+        <p>
+            Currently we only provide a standard set of resources for each machine. If you would like to discuss increasing these values email us at <a href="mailto:cloud-support@helpdesk.gridpp.rl.ac.uk">cloud-support@helpdesk.gridpp.rl.ac.uk</a>.
+        </p>
+
+        <br />
+        <h3><a name="quota" href="#quota" class="faq">5. Can I increase my quota?</a></h3>
+        <p>
+            Yes, if you would like your quota increased email us at <a href="mailto:cloud-support@helpdesk.gridpp.rl.ac.uk">cloud-support@helpdesk.gridpp.rl.ac.uk</a>.
+        </p>
+
+        <br />
+        <h3><a name="disk" href="#disk" class="faq">6. Can I increase my disk size?</a></h3>
+        <p>
+            Yes, if you would like access to more storage email us at <a href="mailto:cloud-support@helpdesk.gridpp.rl.ac.uk">cloud-support@helpdesk.gridpp.rl.ac.uk</a>.
+        </p>
+
+        <br />
+        <h3><a name="stopping" href="#stopping" class="faq">7. What is the <span class="label label-warning" style="font-size:50%;vertical-align:middle">STOPPING</span> state?</a></h3>
+        <p>
+            When a VM is deleted, a snapshop is taken an stored for a period of time. This is for the reason of security and traceability.
+        <p>
+
+        <br />
+        <h3><a name="os" href="#os" class="faq">8. Do you support other Linux variants/version?</a></h3>
+        <p>
+            Yes, if you would like to discuss adding different images or versions to the cloud, email us at <a href="mailto:cloud-support@helpdesk.gridpp.rl.ac.uk">cloud-support@helpdesk.gridpp.rl.ac.uk</a>.
+        </p>
+
+        <br />
+        <h3><a name="pakiti" href="#pakiti" class="faq">9. Why are Pakiti and rsyslog running on my VM?</a></h3>
+        <p>
+            These services are used for monitoring and security. Please refrain from stopping or changing the behaviour of either of these service. Please make sure you have read the <a href="tos.html">Terms of Service</a>.
+        </p>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="footer">
+        <div id="footer-bottom" class="text-center">
+            &copy; Copyright STFC 2016 &nbsp; | &nbsp;<a href="tos.html">Terms of Service</a>&nbsp; | &nbsp;<a href="faq.html">Frequently Asked Questions</a>
+        </div>
+    </footer>
+    <script src="/assets/components/jquery/jquery-2.2.0.min.js"></script>
+    <script src="/assets/components/jquery/js.cookie-2.1.0.js"></script>
+    <script src="/assets/components/bootstrap/js/bootstrap-3.3.6.min.js"></script>
+    <script src="/assets/js/menu.js"></script>
+
+
+</body>
+</html>

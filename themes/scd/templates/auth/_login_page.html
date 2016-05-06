@@ -1,0 +1,41 @@
+{% extends 'auth/_login_form.html' %}
+{% load i18n %}
+
+{% block pre_login %}
+
+<nav class="navbar-inverse material-header navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            {% include "header/_brand.html" %}
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<main id="home" class="container">
+
+    <div class="row">
+        <div class="col-md-8 ">
+            <div class="jumbotron">
+                {% include "html/welcome.html" %}
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div id="login" class="panel panel-default">
+                {{ block.super }}
+                {% endblock %}
+                {% block post_login %}
+                {{ block.super }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            {% include "html/about.html" %}
+        </div>
+    </div>
+    <div class="push"></div>
+</main>
+{% endblock %}

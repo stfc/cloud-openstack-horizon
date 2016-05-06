@@ -7,10 +7,8 @@
 @import "components/magic_search";
 @import "components/navbar";
 @import "components/sidebar";
-
-.login .splash-logo {
-  width: 215px;
-}
+@import "components/footer";
+@import "components/auth";
 
 // General Layout Changes
 #sidebar {
@@ -22,9 +20,7 @@
   transition: padding-left $sidebar-animation;
   display: block;
 
-  @media (min-width: $screen-lg) {
-    padding-left: $sidebar-width;
-  }
+  padding: 0 140px 0 160px;
 }
 
 #main_content {
@@ -32,7 +28,6 @@
   min-width: unset;
   width: 100%;
 }
-
 
 // Border radius is unattractive here
 .navbar {
@@ -80,9 +75,12 @@
 }
 
 .navbar-brand {
+  line-height: 50px;
+  height: 50px;
+  border-right: 1px solid #002742;
   svg {
-    height: $navbar-height - $padding-small-horizontal*2;
-    margin-top: $padding-small-horizontal;
+    height: 36px;
+    margin-top: 4px;
     display: inline-block;
   }
 }
@@ -93,8 +91,6 @@
 
   @media (max-width: $screen-lg) {
     display: inline-block;
-    float: left;
-
     & > button {
       padding: $navbar-padding-vertical $navbar-padding-horizontal;
       height: $navbar-height;

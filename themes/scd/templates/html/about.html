@@ -1,0 +1,12 @@
+{% load themes %}
+
+<h1 class="page-header">Infrastructure</h1>
+<img src={% themable_asset "img/clouds.png" %} style="width:170px;float:right;margin-top:-15px">
+<p>
+    The cloud is based on <a href="https://www.openstack.org/">OpenStack</a> for the virtualisation and <a href="http://ceph.com">CEPH</a> for the storage. For the hardware, we use
+</p>
+<ul>
+    <li>28x Dell R420 for the hypervisors</li>
+    <li>30x Dell R520 for the storage nodes</li>
+</ul>
+This gives us a total of <b>3.5TB</b> of memory, <b>896</b> processing cores and a storage capacity of approximately <b>750TB</b>.

@@ -108,8 +108,6 @@
 }
 
 @include keyframes(md-hamburger-icon--slide-after) {
-  0% {
-  }
   100% {
     @include rotate(-45deg);
     margin: 3% 37%;
@@ -121,8 +119,6 @@
   0% {
     @include rotate(-180deg);
   }
-  100% {
-  }
 }
 
 @include keyframes(md-hamburger-icon--slide-before-from) {
@@ -130,8 +126,6 @@
     @include rotate(45deg);
     margin: 3% 37%;
     width: 75%;
-  }
-  100% {
   }
 }
 
@@ -141,7 +135,4 @@
     margin: 3% 37%;
     width: 75%;
   }
-  100% {
-  }
 }
-

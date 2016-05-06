@@ -19,7 +19,7 @@ $(document).ready(function () {
   var $sidenav = $('#sidebar');
   var $mask = $(document.createElement('div'))
     .prop('id', 'md-hamburger-mask')
-    .appendTo($('#content_body'));
+    .appendTo($('#sidebar'));
 
   // Hamburger Happiness !!!
   $(document).on('click', '.md-hamburger', function () {

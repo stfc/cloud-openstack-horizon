@@ -13,7 +13,7 @@
   width: $sidebar-width;
   z-index: 3;
   margin-left: 0;
-  overflow-x: scroll;
+  overflow-y: auto;
 
   .sidebar-wrapper {
     background: $body-bg;
@@ -63,17 +63,10 @@
     padding-left: $padding-small-horizontal;
   }
 
-  // Specialness for smaller screens!
-  @media (max-width: $screen-lg) {
-    @include translate(-$sidebar-width, 0);
-    border: none;
+  @include translate(-$sidebar-width, 0);
+  border: none;
 
-    &.active {
-      @include translate(0, 0);
-    }
-
-    .sidebar-wrapper {
-      height: auto;
-    }
+  &.active {
+    @include translate(0, 0);
   }
 }

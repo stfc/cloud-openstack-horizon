@@ -22,9 +22,6 @@
   transition: padding-left $sidebar-animation;
   display: block;
 
-  @media (min-width: $screen-lg) {
-    padding-left: $sidebar-width;
-  }
 }
 
 #main_content {
@@ -71,10 +68,8 @@
       }
     }
 
-    @media (max-width: $screen-sm) {
-      .dropdown-header {
-        color: $navbar-inverse-link-color;
-      }
+    .dropdown-header {
+      color: $navbar-inverse-link-color;
     }
   }
 }
@@ -89,16 +84,12 @@
 
 // Hamburger menu only shows on smaller screen sizes
 .navbar-header .md-hamburger {
-  display: none;
+  display: inline-block;
+  float:left;
 
-  @media (max-width: $screen-lg) {
-    display: inline-block;
-    float: left;
-
-    & > button {
-      padding: $navbar-padding-vertical $navbar-padding-horizontal;
-      height: $navbar-height;
-    }
+  & > button {
+    padding: $navbar-padding-vertical $navbar-padding-horizontal;
+    height: $navbar-height;
   }
 }
 
@@ -117,10 +108,8 @@
   z-index: 2;
   transition: all $hamburger-transition;
 
-  @media (max-width: $screen-lg) {
-    &.active {
-      visibility: visible;
-      opacity: 1;
-    }
+  &.active {
+    visibility: visible;
+    opacity: 1;
   }
 }

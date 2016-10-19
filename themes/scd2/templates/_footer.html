@@ -1,0 +1,60 @@
+<footer class="text-center">
+    &copy; Copyright STFC 2016 &nbsp;
+    | &nbsp;<a href="" data-toggle="modal" data-target="#terms">Terms of Service</a>&nbsp;
+    | &nbsp;<a href="" data-toggle="modal" data-target="#sla">Service-level Agreement</a>&nbsp;
+    | &nbsp;<a href="" data-toggle="modal" data-target="#faq">Frequently Asked Questions</a>&nbsp;
+    | &nbsp;<a href="https://github.com/stfc/cloud-openstack-horizon">GitHub</a>&nbsp;
+    | &nbsp;<a href="https://github.com/stfc/cloud-openstack-horizon/issues">Issue Tracker</a>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="faq-page">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">FAQs</h2>
+            </div>
+            <div class="modal-body">
+                {% include "html/faq.html" %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="terms-page">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">Terms of Service</h2>
+            </div>
+            <div class="modal-body">
+                {% include "html/terms.html" %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sla" tabindex="-1" role="dialog" aria-labelledby="terms-page">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">SLA</h2>
+            </div>
+            <div class="modal-body">
+                {% include "html/sla.html" %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

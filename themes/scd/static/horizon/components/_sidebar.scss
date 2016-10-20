@@ -2,31 +2,18 @@
   border-right: 1px solid rgba(0, 0, 0, 0.14);
   bottom: 0;
   display: block;
-  left: -220px;
+  left: 0;
   position: fixed;
   top: $navbar-height;
-
   /* No mixin for this yet */
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-
   @include translate(0, 0);
   @include transition(transform $sidebar-animation);
   width: $sidebar-width;
   z-index: 3;
   margin-left: 0;
-
-  @include transition (all 0.3s ease 0s);
-
-  .sidebar-reveal {
-    width: 20px;
-    height: 100%;
-    position: absolute;
-    right: -1px;
-    background-color: #003562;
-    z-index: 10;
-    cursor: pointer;
-  }
+  overflow-y: auto;
 
   .sidebar-wrapper {
     background: $body-bg;
@@ -76,17 +63,10 @@
     padding-left: $padding-small-horizontal;
   }
 
-  // Specialness for smaller screens!
-  @media (max-width: $screen-lg) {
-    @include translate(-$sidebar-width, 0);
-    border: none;
+  @include translate(-$sidebar-width, 0);
+  border: none;
 
-    &.active {
-      @include translate(0, 0);
-    }
-
-    .sidebar-wrapper {
-      height: auto;
-    }
+  &.active {
+    @include translate(0, 0);
   }
 }

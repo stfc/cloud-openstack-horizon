@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 @import "/horizon/lib/mdi/scss/icons";
-
 .themable-checkbox {
 
   input[type=checkbox] {
@@ -12,7 +11,7 @@
     & + label {
       @extend .mdi-checkbox-blank-outline;
 
-      &::before {
+      &:before {
         @extend .mdi;
         font-size: $font-size-h5;
       }
@@ -22,7 +21,7 @@
     &:checked + label {
       @extend .mdi-checkbox-marked;
 
-      &::before {
+      &:before {
         color: $brand-primary;
       }
     }

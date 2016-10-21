@@ -3,8 +3,11 @@
   clear: both;
   padding: 30px 0;
   background-color: #333;
-}
-
-#footer a {
-  color: #ddd;
+  .text-center{
+    color: #939393;
+    a {color: #ddd}
+  }
+  .modal-content *:not(a){
+    color: black;
+  }
 }

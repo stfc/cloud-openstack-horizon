@@ -13,10 +13,10 @@
    viewBox="0 0 230 49.999995"
    height="49.999996"
    width="230"
-   inkscape:version="0.91 r"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="cloud-logo.svg">
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#2b2d2f"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -36,7 +36,10 @@
      inkscape:zoom="1.730096"
      inkscape:cx="147.96866"
      inkscape:cy="-24.708237"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
   <defs
      id="defs4" />
   <metadata
@@ -56,7 +59,7 @@
      id="layer1"
      style="fill:#000000">
     <g
-       transform="matrix(2.9744492,0,0,2.9744492,66.546205,-2081.3037)"
+       transform="matrix(2.9744492,0,0,2.9744492,65.968202,-2088.2397)"
        id="text14127"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
       <path

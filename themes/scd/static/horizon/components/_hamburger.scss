@@ -67,11 +67,13 @@
   &:before {
     @include animation-name(md-hamburger-icon--slide-before);
     @include animation-fill-mode(forwards);
+    left: -1%;
   }
 
   &:after {
     @include animation-name(md-hamburger-icon--slide-after);
     @include animation-fill-mode(forwards);
+    left: 4%;
   }
 
 }
@@ -144,4 +146,3 @@
   100% {
   }
 }
-

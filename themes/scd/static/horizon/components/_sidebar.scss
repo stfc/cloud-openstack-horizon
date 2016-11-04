@@ -20,6 +20,10 @@
     height: 100%;
   }
 
+  #sidebar-drawer {
+    background: $body-bg;
+  }
+
   .openstack-dashboard {
     & > a {
       font-weight: bold;

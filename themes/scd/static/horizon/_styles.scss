@@ -1,34 +1,49 @@
+@import "animations";
 @import "icons";
-@import "components/context_selection";
-@import "components/footer";
-@import "components/messages";
 @import "components/checkboxes";
+@import "components/context_selection";
+@import "components/datepicker";
+@import "components/dropdowns";
 @import "components/hamburger";
 @import "components/help_panel";
+@import "components/loader_circular_example";
+@import "components/loader_line_example";
+@import "components/loader_spinner";
 @import "components/magic_search";
+@import "components/messages";
 @import "components/navbar";
+@import "components/progress_bars";
+@import "components/radiobuttons";
+@import "components/selects";
 @import "components/sidebar";
+@import "components/spinners";
+@import "components/trees";
+
+
+//SCD Customisation Start
 @import "components/auth";
 @import "components/custom_theming";
+@import "components/footer";
+@import "components/messages";
+//SCD Customisation End
+
+
 
 .login .splash-logo {
   width: 215px;
-}
-
-// General Layout Changes
-#sidebar {
-  position: fixed;
-  display: block;
 }
 
 #content_body {
   transition: padding-left $sidebar-animation;
   display: block;
 
+  @media (max-width: $screen-lg) {
+    padding-left: 0;
+  }
 }
 
 #main_content {
-  display: inline-table;
+  display: block;
   min-width: unset;
   width: 100%;
 }
@@ -57,9 +72,6 @@
   }
 
   &-inverse {
-    background-color: #00418d;
-    border-color: #002742;
-    background-image: linear-gradient(to bottom, #004d8d, #00418d);
     .navbar-brand {
       svg {
         fill: $navbar-inverse-link-active-color;
@@ -74,8 +86,10 @@
       }
     }
 
-    .dropdown-header {
-      color: $navbar-inverse-link-color;
+    @media (max-width: $screen-sm) {
+      .dropdown-header {
+        color: $navbar-inverse-link-color;
+      }
     }
   }
 }
@@ -90,12 +104,16 @@
 
 // Hamburger menu only shows on smaller screen sizes
 .navbar-header .md-hamburger {
-  display: inline-block;
-  float:left;
+  display: none;
 
-  & > button {
-    padding: $navbar-padding-vertical $navbar-padding-horizontal;
-    height: $navbar-height;
+  @media (max-width: $screen-lg) {
+    display: inline-block;
+    float: left;
+
+    & > button {
+      padding: $navbar-padding-vertical $navbar-padding-horizontal;
+      height: $navbar-height;
+    }
   }
 }
 
@@ -114,8 +132,10 @@
   z-index: 2;
   transition: all $hamburger-transition;
 
-  &.active {
-    visibility: visible;
-    opacity: 1;
+  @media (max-width: $screen-lg) {
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }

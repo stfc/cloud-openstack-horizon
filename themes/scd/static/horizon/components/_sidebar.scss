@@ -13,15 +13,11 @@
   width: $sidebar-width;
   z-index: 3;
   margin-left: 0;
-  overflow-y: auto;
+  overflow-x: scroll;
 
   .sidebar-wrapper {
     background: $body-bg;
     height: 100%;
-  }
-
-  #sidebar-drawer {
-    background: $body-bg;
   }
 
   .openstack-dashboard {
@@ -56,6 +52,10 @@
   .openstack-panel > a {
     padding: $padding-small-horizontal $font-size-h4 $padding-small-horizontal ($font-size-h1 - $padding-small-horizontal);
     text-align: left;
+
+    &.active {
+      font-weight: bold;
+    }
   }
 
   .openstack-toggle {
@@ -67,10 +67,17 @@
     padding-left: $padding-small-horizontal;
   }
 
-  @include translate(-$sidebar-width, 0);
-  border: none;
+  // Specialness for smaller screens!
+  @media (max-width: $screen-lg) {
+    @include translate(-$sidebar-width, 0);
+    border: none;
 
-  &.active {
-    @include translate(0, 0);
+    &.active {
+      @include translate(0, 0);
+    }
+
+    .sidebar-wrapper {
+      height: auto;
+    }
   }
 }

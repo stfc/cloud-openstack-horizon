@@ -3,11 +3,18 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install packages
-RUN apt -y update
-
-RUN apt -y install \
-    python3-pip python3-dev libapache2-mod-wsgi-py3 \
-    git apache2 memcached libffi-dev python3-cffi vim
+RUN apt -y update && \
+    apt -y install \
+    python3-pip \
+    python3-dev \
+    libapache2-mod-wsgi-py3 \
+    git \
+    apache2 \
+    memcached \
+    libffi-dev \
+    python3-cffi \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
 
 # Clone Horizon
 ENV APACHE_RUN_USER=www-data \
@@ -26,7 +33,7 @@ COPY upper-constraints.txt ${HORIZON_BASEDIR}
 
 RUN \
     pip install --upgrade pip && \
-    # pip install .
+    # can use below line for after openstack train instead of upper-constraints.txt file
     # pip install -c https://opendev.org/openstack/requirements/raw/branch/stable/${VERSION}/upper-constraints.txt . && \
     pip install -c upper-constraints.txt . && \
     pip install python-memcached
